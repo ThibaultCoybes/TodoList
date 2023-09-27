@@ -85,17 +85,17 @@ class __TwigTemplate_dda5e00b57cb64087cb784c11035bbea extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Create new User</h1>
+        echo "    <h1>Register</h1>
 
     ";
         // line 8
         echo twig_include($this->env, $context, "user/_form.html.twig");
         echo "
 
-    <a href=\"";
+    <a class=\"backto\" href=\"";
         // line 10
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_index");
-        echo "\">back to list</a>
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+        echo "\">back to login</a>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -127,12 +127,11 @@ class __TwigTemplate_dda5e00b57cb64087cb784c11035bbea extends Template
 {% block title %}New User{% endblock %}
 
 {% block body %}
-    <h1>Create new User</h1>
+    <h1>Register</h1>
 
     {{ include('user/_form.html.twig') }}
 
-    <a href=\"{{ path('app_user_index') }}\">back to list</a>
-{% endblock %}
-", "user/new.html.twig", "C:\\Users\\tib_c\\OneDrive\\Bureau\\2BCI\\Symfony\\examin\\templates\\user\\new.html.twig");
+    <a class=\"backto\" href=\"{{ path('app_login') }}\">back to login</a>
+{% endblock %}", "user/new.html.twig", "C:\\Users\\tib_c\\OneDrive\\Bureau\\2BCI\\Symfony\\examin\\templates\\user\\new.html.twig");
     }
 }

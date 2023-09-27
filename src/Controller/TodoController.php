@@ -6,7 +6,9 @@ use App\Entity\Todo;
 use App\Entity\User;
 use App\Form\TodoType;
 use App\Repository\TodoRepository;
+use App\Security\UserAuthenticator;
 use Doctrine\ORM\EntityManagerInterface;
+use Monolog\DateTimeImmutable;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -39,20 +41,13 @@ class TodoController extends AbstractController
         $form = $this->createForm(TodoType::class, $todo);
         $form->handleRequest($request);
 
-        $currentUserEmail ='';
-        if ($this->getUser()) {
-//             return $this->redirectToRoute('app_todo_index');
-            $currentUserEmail = $authenticationUtils->getLastUsername();
-            $currentUser = $em->getRepository(User::class)->findBy(['email' => $currentUserEmail]);
-            dd($currentUser);
-        }
+        $currentId = $this->getUser()->getId();
 
         if ($form->isSubmitted() && $form->isValid()) {
             $todo->setCreatedAt(date_create_immutable('now'));
-            $todo->setUser();
+            $todo->setUser($currentId);
             $em->persist($todo);
             $em->flush();
-
             return $this->redirectToRoute('app_todo_index', [], Response::HTTP_SEE_OTHER);
         }
 
@@ -77,6 +72,7 @@ class TodoController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $todo->setModifiedAt(date_create_immutable('now'));
             $entityManager->flush();
 
             return $this->redirectToRoute('app_todo_index', [], Response::HTTP_SEE_OTHER);

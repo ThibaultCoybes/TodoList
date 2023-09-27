@@ -8,7 +8,6 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Name</th>
                 <th>Content</th>
                 <th>Created_at</th>
@@ -19,7 +18,6 @@
         <tbody>
         {% for todo in todos %}
             <tr>
-                <td>{{ todo.id }}</td>
                 <td>{{ todo.name }}</td>
                 <td>{{ todo.content }}</td>
                 <td>{{ todo.createdAt ? todo.createdAt|date('Y-m-d H:i:s') : '' }}</td>

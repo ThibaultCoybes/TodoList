@@ -46,31 +46,56 @@ class __TwigTemplate_983d984dfe8635fb6392b6f4bcf42996 extends Template
         // line 1
         echo "<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset=\"UTF-8\">
-        <title>";
+<head>
+    <meta charset=\"UTF-8\">
+    <title>";
         // line 5
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
-        <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>\">
-        ";
+    <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>\">
+    <link rel=\"stylesheet\" href=\"";
         // line 7
-        $this->displayBlock('stylesheets', $context, $blocks);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("asset/css/style.css"), "html", null, true);
+        echo "\">
+    <link rel=\"stylesheet\" href=\"";
+        // line 8
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("asset/css/nav.css"), "html", null, true);
+        echo "\">
+    <link rel=\"stylesheet\" href=\"";
         // line 9
-        echo "
-        ";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("asset/css/todo.css"), "html", null, true);
+        echo "\">
+    <link rel=\"stylesheet\" href=\"";
         // line 10
-        $this->displayBlock('javascripts', $context, $blocks);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("asset/css/login.css"), "html", null, true);
+        echo "\">
+    <link rel=\"stylesheet\" href=\"";
+        // line 11
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("asset/css/register.css"), "html", null, true);
+        echo "\">
+    <link rel=\"stylesheet\" href=\"";
         // line 12
-        echo "    </head>
-    <body>
-        ";
-        // line 14
-        $this->displayBlock('body', $context, $blocks);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("asset/css/addTodo.css"), "html", null, true);
+        echo "\">
+    ";
+        // line 13
+        $this->displayBlock('stylesheets', $context, $blocks);
         // line 15
-        echo "    </body>
-</html>
-";
+        echo "
+    ";
+        // line 16
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 18
+        echo "</head>
+<body>
+<div class=\"maincard\">
+    ";
+        // line 21
+        $this->displayBlock('body', $context, $blocks);
+        // line 22
+        echo "</div>
+</body>
+</html>";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
 
@@ -98,7 +123,7 @@ class __TwigTemplate_983d984dfe8635fb6392b6f4bcf42996 extends Template
 
     }
 
-    // line 7
+    // line 13
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -108,8 +133,8 @@ class __TwigTemplate_983d984dfe8635fb6392b6f4bcf42996 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 8
-        echo "        ";
+        // line 14
+        echo "    ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -118,7 +143,7 @@ class __TwigTemplate_983d984dfe8635fb6392b6f4bcf42996 extends Template
 
     }
 
-    // line 10
+    // line 16
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -128,8 +153,8 @@ class __TwigTemplate_983d984dfe8635fb6392b6f4bcf42996 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 11
-        echo "        ";
+        // line 17
+        echo "    ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -138,7 +163,7 @@ class __TwigTemplate_983d984dfe8635fb6392b6f4bcf42996 extends Template
 
     }
 
-    // line 14
+    // line 21
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -161,29 +186,41 @@ class __TwigTemplate_983d984dfe8635fb6392b6f4bcf42996 extends Template
         return "base.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  142 => 14,  132 => 11,  122 => 10,  112 => 8,  102 => 7,  83 => 5,  71 => 15,  69 => 14,  65 => 12,  63 => 10,  60 => 9,  58 => 7,  53 => 5,  47 => 1,);
+        return array (  167 => 21,  157 => 17,  147 => 16,  137 => 14,  127 => 13,  108 => 5,  96 => 22,  94 => 21,  89 => 18,  87 => 16,  84 => 15,  82 => 13,  78 => 12,  74 => 11,  70 => 10,  66 => 9,  62 => 8,  58 => 7,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset=\"UTF-8\">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>\">
-        {% block stylesheets %}
-        {% endblock %}
+<head>
+    <meta charset=\"UTF-8\">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>\">
+    <link rel=\"stylesheet\" href=\"{{asset('asset/css/style.css')}}\">
+    <link rel=\"stylesheet\" href=\"{{asset('asset/css/nav.css')}}\">
+    <link rel=\"stylesheet\" href=\"{{asset('asset/css/todo.css')}}\">
+    <link rel=\"stylesheet\" href=\"{{asset('asset/css/login.css')}}\">
+    <link rel=\"stylesheet\" href=\"{{asset('asset/css/register.css')}}\">
+    <link rel=\"stylesheet\" href=\"{{asset('asset/css/addTodo.css')}}\">
+    {% block stylesheets %}
+    {% endblock %}
 
-        {% block javascripts %}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
-</html>
-", "base.html.twig", "C:\\Users\\tib_c\\OneDrive\\Bureau\\2BCI\\Symfony\\examin\\templates\\base.html.twig");
+    {% block javascripts %}
+    {% endblock %}
+</head>
+<body>
+<div class=\"maincard\">
+    {% block body %}{% endblock %}
+</div>
+</body>
+</html>", "base.html.twig", "C:\\Users\\tib_c\\OneDrive\\Bureau\\2BCI\\Symfony\\examin\\templates\\base.html.twig");
     }
 }
